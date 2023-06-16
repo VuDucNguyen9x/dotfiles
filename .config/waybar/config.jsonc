@@ -62,11 +62,11 @@
 
     "custom/weather": {
         //shows the current weather and forecast
-        "tooltip" : true,
-        "format" : "{}",
-        "interval" : 60,
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
-        "return-type" : "json"
+        "format": "{}°C",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar",
+        "return-type": "json"
     },
 
     "tray": {
