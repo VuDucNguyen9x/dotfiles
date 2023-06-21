@@ -1,14 +1,13 @@
 ignore-empty-password
 font=JetBrains Mono Nerd Font
-#font-size=9
 
 screenshots
 
 effect-blur=7x5
 
 indicator
-indicator-radius=120
-indicator-thickness=20
+indicator-radius=150
+indicator-thickness=15
 indicator-caps-lock
 
 clock
