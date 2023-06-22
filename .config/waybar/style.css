@@ -1,3 +1,5 @@
+@import "frappe.css";
+
 * {
     border: none;
     border-radius: 0px;
@@ -9,46 +11,40 @@
 }
 
 window#waybar {
-    background: rgba(21, 18, 27, 0);
-    color: #cdd6f4;
+    background: transparent;
+    color: @text;
 }
 
 tooltip {
-    background: #1e1e2e;
+    background: @mantle;
     border-radius: 10px;
     border-width: 1.5px;
     border-style: solid;
-    border-color: #11111b;
+    border-color: @crust;
     transition: 0.3s;
 }
 
 #workspaces button {
     padding: 5px;
-    color: #737994;
+    color: @overlay0;
     margin-right: 5px;
 }
 
 #workspaces button.active {
-    color: #BF40BF;
-    background: #eba0ac;
-    border-radius: 20px;
-}
-
-#workspaces button.focused {
-    color: #9ece6a;
-    background: #eba0ac;
+    color: @overlay1;
+    background: @pink;
     border-radius: 20px;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    background: #a6e3a1;
+    color: @crust;
+    background: @red;
     border-radius: 20px;
 }
 
 #workspaces button:hover {
-    background: #11111b;
-    color: #cdd6f4;
+    background: @crust;
+    color: @text;
     border-radius: 20px;
 }
 
@@ -64,12 +60,12 @@ tooltip {
 #workspaces,
 #tray,
 #backlight {
-    background: #1e1e2e;
+    background: @crust;
     opacity: 0.8;
     padding: 0px 5px;
     margin: 0;
     margin-top: 5px;
-    border: 1px solid #181825;
+    border: 1px solid @crust;
 }
 
 #temperature {
@@ -78,7 +74,7 @@ tooltip {
 }
 
 #temperature.critical {
-    color: #eba0ac;
+    color: @pink;
 }
 
 #backlight {
@@ -92,7 +88,6 @@ tooltip {
 }
 
 #workspaces {
-    background: #1e1e2e;
     border-radius: 20px;
     margin-left: 5px;
     padding-right: 0px;
@@ -100,7 +95,7 @@ tooltip {
 }
 
 #custom-power_profile {
-    color: #a6e3a1;
+    color: @teal;
     border-left: 0px;
     border-right: 0px;
 }
@@ -112,7 +107,7 @@ tooltip {
 }
 
 #clock {
-    color: #fab387;
+    color: @peach;
     border-radius: 20px 0px 0px 20px;;
     margin-left: 5px;
     border-right: 0px;
@@ -121,26 +116,26 @@ tooltip {
 }
 
 #network {
-    color: #f9e2af;
+    color: @yellow;
     border-radius: 20px 0px 0px 20px;
     border-left: 0px;
     border-right: 0px;
 }
 
 #bluetooth {
-    color: #89b4fa;
+    color: @sky;
     border-radius: 0px 20px 20px 0px;
     margin-right: 5px
-} 
+}
 
 #pulseaudio {
-    color: #89b4fa;
+    color: @sky;
     border-left: 0px;
     border-right: 0px;
 }
 
 #pulseaudio.microphone {
-    color: #cba6f7;
+    color: @lavender;
     border-left: 0px;
     border-right: 0px;
     border-radius: 0px 20px 20px 0px;
@@ -149,11 +144,19 @@ tooltip {
 }
 
 #battery {
-    color: #a6e3a1;
+    color: @green;
     border-radius: 0 20px 20px 0;
     margin-right: 5px;
     padding-right: 7px;
     border-left: 0px;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
 }
 
 #custom-weather {

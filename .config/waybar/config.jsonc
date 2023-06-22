@@ -7,7 +7,6 @@
     "gtk-layer-shell": true,
     "height": 30,
     "modules-left": ["wlr/workspaces","hyprland/window"],
-    //"modules-left": ["clock","hyprland/window"],
     "modules-center": ["clock","custom/weather"],
     "modules-right": ["tray","network","bluetooth","temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone"],
 

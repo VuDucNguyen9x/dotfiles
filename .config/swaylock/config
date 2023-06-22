@@ -12,7 +12,7 @@ indicator-caps-lock
 
 clock
 timestr=%I:%M %p
-datestr=%A, %d %B
+datestr=%a, %d %B
 
 ring-color=bb00cc
 
