@@ -1,5 +1,6 @@
 {
     "layer": "top",
+    //"output":["eDP-1"],
     "position": "top",
     "mod": "dock",
     "exclusive": true,
@@ -8,7 +9,7 @@
     "height": 30,
     "modules-left": ["wlr/workspaces","hyprland/window"],
     "modules-center": ["clock","custom/weather"],
-    "modules-right": ["tray","network","bluetooth","temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone"],
+    "modules-right": ["tray","custom/updates","network","bluetooth","temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone"],
 
     "hyprland/window": {
         "format": " {}"
@@ -71,6 +72,19 @@
     "tray": {
         "icon-size": 15,
         "spacing": 10
+    },
+
+    "custom/updates": {
+        "format": "{icon}{}",
+        "return-type": "json",
+        "format-icons": {
+            "pending-updates": " ",
+            "updated": " "
+        },
+        "exec-if": "which waybar-updates",
+        "exec": "waybar-updates",
+        "on-click": "konsole -e paru",
+        "on-click-right": "waybar-updates refresh"
     },
 
     "clock": {

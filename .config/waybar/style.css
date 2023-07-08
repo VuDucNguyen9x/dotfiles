@@ -48,6 +48,7 @@ tooltip {
     border-radius: 20px;
 }
 
+#custom-updates,
 #custom-power_profile,
 #custom-weather,
 #window,
@@ -83,9 +84,27 @@ tooltip {
 }
 
 #tray {
-    border-radius: 20px;
+    border-radius: 20px 0px 0px 20px;
+    border-right: 0px;
+    padding-left: 5px;
+}
+
+#custom-updates {
+    border-radius: 0px 20px 20px 0px;
     margin-right: 5px;
 }
+
+#custom-updates {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+#custom-updates.pending-updates {
+	animation-name: blink-update;
+	animation-duration: 3s;
+}
+
+
 
 #workspaces {
     border-radius: 20px;
@@ -108,7 +127,7 @@ tooltip {
 
 #clock {
     color: @peach;
-    border-radius: 20px 0px 0px 20px;;
+    border-radius: 20px 0px 0px 20px;
     margin-left: 5px;
     border-right: 0px;
     transition: 0.3s;
