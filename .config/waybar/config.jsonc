@@ -2,7 +2,7 @@
     "layer": "top",
     //"output":["eDP-1"],
     "position": "top",
-    "mod": "dock",
+    // "mode": "dock",
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -36,20 +36,14 @@
     "network": {
         	"format-wifi": " {signalStrength}% {essid}",
         	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        	"tooltip-format": "{ifname} via {gwaddr} ",
-        	"format-linked": "{ifname} (No IP) ",
+            "format-linked": "{ifname} (No IP) ",
         	"format-disconnected": "󰤮 Disconnected",
-        	"format-alt": "{ifname}: {ipaddr}/{cidr}"
+            "tooltip-format": "{ifname} via {gwaddr} ",
+            "tooltip-format-wifi": " {signalStrength}%\nIP: {ipaddr}/{cidr}\nGW: {gwaddr}",
+            "tooltip-format-ethernet": "{ifname} via {gwaddr} ",
+            "tooltip-format-disconnected": "Disconnected",
+            "on-click": "networkmanager_dmenu"
 	},
-	//"network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        //"format-wifi": "  {signalStrength}%",
-        //"format-ethernet": "{ipaddr}/{cidr} ",
-        //"tooltip-format": "{essid} - {ifname} via {gwaddr} ",
-        //"format-linked": "{ifname} (No IP) ",
-        //"format-disconnected": "Disconnected ⚠",
-        //"format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
-    //},
     
     //"custom/power_profile":{
         //shows the current power profile and switches to next on click

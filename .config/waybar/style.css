@@ -65,7 +65,7 @@ tooltip {
     opacity: 0.8;
     padding: 0px 5px;
     margin: 0;
-    margin-top: 5px;
+    margin-top: 2px;
     border: 1px solid @crust;
 }
 
