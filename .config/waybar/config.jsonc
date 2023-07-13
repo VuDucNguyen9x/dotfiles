@@ -34,13 +34,13 @@
     },
 
     "network": {
-        	"format-wifi": " {signalStrength}% {essid}",
-        	"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-            "format-linked": "{ifname} (No IP) ",
+            "format-wifi": " {bandwidthUpBytes} 󱚻  {bandwidthDownBytes}",
+            "format-ethernet": "󰈀 󰄝 {bandwidthUpBytes} 󰄠 {bandwidthDownBytes}",
+            "format-linked": "{ifname} (No IP) 󰊗",
         	"format-disconnected": "󰤮 Disconnected",
-            "tooltip-format": "{ifname} via {gwaddr} ",
-            "tooltip-format-wifi": " {signalStrength}%\nIP: {ipaddr}/{cidr}\nGW: {gwaddr}",
-            "tooltip-format-ethernet": "{ifname} via {gwaddr} ",
+            "tooltip-format": "{ifname} via {gwaddr} ",
+            "tooltip-format-wifi": " {signalStrength}% {essid}\nIP: {ipaddr}/{cidr}\nGW: {gwaddr}",
+            "tooltip-format-ethernet": "󰈀 {ifname}\nIP: {ipaddr}/{cidr}\nGW: {gwaddr}",
             "tooltip-format-disconnected": "Disconnected",
             "on-click": "networkmanager_dmenu"
 	},
@@ -82,7 +82,7 @@
     },
 
     "clock": {
-        "format": "{: %I:%M %p   %a, %b %e}",
+        "format": "{: %I:%M %p  %a, %b %e}",
         "tooltip-format": "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -108,7 +108,7 @@
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
-        "format-icons": ["󰃞", "", "󰃟", "󰃠"],
+        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
         "on-scroll-up": "light -A 5",
         "on-scroll-down": "light -U 5",
         "min-length": 6
@@ -121,12 +121,10 @@
             "critical": 20
         },
         "format": "{icon} {capacity}%",
-        //"format-charging": "󰂄 {capacity}%",
         "format-plugged": "󰂄 {capacity}%",
         "format-alt": "{time} {icon}",
-        //"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
         "format-icons": {
-            "charging": ["", "", "", "", "", "", ""],
+            "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
             "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
         },
     },
