@@ -7,7 +7,7 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 30,
-    "modules-left": ["wlr/workspaces","hyprland/window"],
+    "modules-left": ["hyprland/workspaces","hyprland/window"],
     "modules-center": ["clock","custom/weather"],
     "modules-right": ["tray","custom/updates","network","bluetooth","temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone"],
 
@@ -15,7 +15,7 @@
         "format": " {}"
     },
 
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
